@@ -55,16 +55,12 @@ body {
   transform: rotateY(180deg);
 }
 
+h5 {
+  position: relative;
+  margin: auto;
+}
+
 .score {
   background-color: green;
   border-radius: 7px;
-  height: 25%;
-  font-weight: 500;
-}
-
-h5 {
-  width: 40%;
-  position: relative;
-  margin: auto;
-  perspective: 1000px;
 }

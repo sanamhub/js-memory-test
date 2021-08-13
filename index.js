@@ -38,6 +38,9 @@ let success = async () => {
   ).innerText = `Score : ${currentScore.toString()} in 8 🎉`;
   if (currentScore === totalScore) {
     document.querySelector(".score").innerText = `Congratulations 🎉🎉`;
+    setTimeout(() => {
+      window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }, 2000);
   }
   reset();
 };
