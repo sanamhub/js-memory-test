@@ -30,8 +30,6 @@ let checkIt = async () => {
 };
 
 let success = async () => {
-  console.log(firstCard);
-  console.log(secondCard);
   firstCard.removeEventListener("click", flip);
   secondCard.removeEventListener("click", flip);
   currentScore += 1;
