@@ -22,7 +22,7 @@ function flip() {
 }
 
 let checkIt = async () => {
-  if (firstCard.dataset.image === secondCard.dataset.image) {
+  if (firstCard.dataset.image === secondCard.dataset.image && firstCard.style.order !== secondCard.style.order) {
     success();
   } else {
     fail();
@@ -30,6 +30,8 @@ let checkIt = async () => {
 };
 
 let success = async () => {
+  console.log(firstCard);
+  console.log(secondCard);
   firstCard.removeEventListener("click", flip);
   secondCard.removeEventListener("click", flip);
   currentScore += 1;
@@ -50,7 +52,7 @@ let fail = async () => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
     reset();
-  }, 500);
+  }, 400);
 };
 
 let reset = async () => {
